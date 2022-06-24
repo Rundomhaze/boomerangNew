@@ -1,6 +1,9 @@
 // Бумеранг является оружием.
 // В дальнейшем можно добавить другое оружие.
 // Тогда можно будет создать класс Weapon и воспользоваться наследованием!
+// const Hero = require('./Hero');
+// const Enemy = require('./Enemy');
+
 
 class Boomerang {
   constructor(position) {
@@ -8,25 +11,21 @@ class Boomerang {
     this.position = position;
   }
 
-  fly() {
-    this.moveRight();
-    this.moveLeft();
-  }
+  // fly() {
+  //   this.moveRight;
+  // }
 
   moveLeft() {
-    // Идём влево.
     setInterval(() => {
       this.position -= 1;
-    }, 25)
+    }, 15);
   }
 
   moveRight() {
-    // Идём вправо
     setInterval(() => {
       this.position += 1;
-    }, 25)
+    }, 25);
   }
-
 }
 
 module.exports = Boomerang;
