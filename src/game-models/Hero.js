@@ -1,9 +1,13 @@
 // Наш герой.
 
 class Hero {
-  constructor({ position }) {
+  constructor({
+    position,
+    countDie = 0
+  }) {
     this.skin = '🤠'; // можете использовать любые emoji '💃'
     this.position = position;
+    this.countDie = countDie;
   }
 
   moveLeft() {
@@ -21,11 +25,15 @@ class Hero {
     this.boomerang.fly();
   }
 
-  
+
   die() {
     this.skin = '💀';
     console.log('YOU ARE DEAD!💀');
     process.exit();
+  }
+
+  countDieEnemy() {
+    this.countDie += 1
   }
 }
 
