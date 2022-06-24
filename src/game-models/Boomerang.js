@@ -21,11 +21,12 @@ class Boomerang {
   }
 
   moveRight() {
-    // Идём вправо.
+    // Идём вправо
     setInterval(() => {
       this.position += 1;
     }, 25)
   }
+
 }
 
 module.exports = Boomerang;
